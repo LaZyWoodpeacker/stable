@@ -1,0 +1,19 @@
+{
+  "name": "sorted_table",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start:front": "npm run dev -w front",
+    "start:back": "npm run start:debug -w back",
+    "build": "npm run build -w back && npm run build -w front && npm run start:prod -w back",
+    "install": "npm install --legacy-peer-deps"
+  },
+  "workspaces": [
+    "front",
+    "back"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

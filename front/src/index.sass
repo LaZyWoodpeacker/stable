@@ -1,0 +1,107 @@
+*
+  margin: 0
+  box-sizing: border-box
+
+$back-color: #232323
+$back-hover: #3d3b3b
+$primary-color: #d3d3d3
+
+#root
+  height: 100vh
+  max-height: 100vh
+
+.main
+  &-layout
+    display: flex
+    flex-direction: column
+    height: 100%
+    background-color: $back-color
+    color: $primary-color
+  &-header    
+    background-color: $back-color
+    border-bottom: 1px solid $back-hover
+  &-content
+    background-color: $back-color
+    flex: 1
+    overflow: auto
+  &-footer
+    border-top: 1px solid $back-hover
+    padding: 2rem 1rem
+    font-size: 1.8rem
+    text-align: right 
+.table
+  width: 100%  
+  &-wrapper
+    min-height: 100%
+  &-row
+    cursor: grab
+    align-items: center
+    border: 1px solid $primary-color
+    user-select: none    
+    border-bottom: 1px solid red
+    font-size: 1.5rem
+    &:hover
+      background-color: $back-hover
+    &_number
+      display: flex
+      justify-content: center
+    &_checkbox
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 100%
+    & > td
+      border-left: 1px solid $back-hover
+.loader
+  height: 5rem
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+.overlay
+  display: none
+  align-items: center
+  justify-content: center
+  position: absolute
+  top:0
+  left:0
+  right:0
+  bottom:0
+  z-index: 1000
+  background-color: #000000cf
+.search
+  padding: 2rem 1rem
+  display: flex
+  &_input
+    padding: 0.35rem 0.8rem
+    font-size: 1.3rem
+    outline: 0
+    margin: 0
+    border: 0
+    width: 100%
+    border-radius: 8px 0 0 8px
+  &_btn
+    padding: 0.35rem 0.8rem
+    outline: 0
+    cursor: pointer
+    border:0
+    font-size: 1.5rem
+    border-radius: 0 8px 8px 0
+    &:hover
+      background-color: #434343
+      color: $primary-color
+@keyframes rotation 
+    0% 
+       transform: rotate(0deg)    
+    100% 
+      transform: rotate(360deg)
+.spinner 
+  width: 48px
+  height: 48px
+  border: 5px solid $primary-color
+  border-bottom-color: transparent
+  border-radius: 50%
+  display: inline-block
+  box-sizing: border-box
+  animation: rotation 1s linear infinite
+    
