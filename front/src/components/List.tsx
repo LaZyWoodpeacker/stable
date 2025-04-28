@@ -15,8 +15,7 @@ const List: React.FC<IProps> = ({ records, onDragAndDrop, onCheck }) => {
         <tr className="table-row">
           <th>&nbsp;</th>
           <th>&#8470;</th>
-          <th>Id</th>
-          <th>email</th>
+          <th>Number</th>
         </tr>
         {records &&
           records.map(([id, checked, value], position) => (

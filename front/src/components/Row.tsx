@@ -68,9 +68,6 @@ export const Row: React.FC<IProps> = ({
         <div className="table-row_number">{position + 1}</div>
       </td>
       <td>
-        <div className="table-row_number">{id}</div>
-      </td>
-      <td>
         <div className="table-row_value">{value}</div>
       </td>
     </tr>

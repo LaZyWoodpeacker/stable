@@ -7,9 +7,9 @@ export class AppService {
   private records: IRow[] = [];
   private limit: number = 20;
   constructor() {
-    this.records = new Array(500)
+    this.records = new Array(1_000_000)
       .fill(0)
-      .map((_, idx) => [idx + 1, false, faker.internet.email()]);
+      .map((_, idx) => [idx + 1, false, String(idx + 1)]);
   }
 
   getPage(offset: number, query?: string): IPage {
