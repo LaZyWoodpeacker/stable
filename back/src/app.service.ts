@@ -6,7 +6,7 @@ export class AppService {
   private records: IRow[] = [];
   private limit: number = 20;
   constructor() {
-    this.records = new Array(1_000_000)
+    this.records = new Array(1_0)
       .fill(0)
       .map((_, idx) => [idx + 1, false, String(idx + 1)]);
   }
