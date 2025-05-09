@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { IPage, IRow } from './types/page.type';
-import { faker } from '@faker-js/faker';
 
 @Injectable()
 export class AppService {
@@ -30,9 +29,8 @@ export class AppService {
     const from = this.records.findIndex((row) => row[0] === fromId);
     const to = this.records.findIndex((row) => row[0] === toId);
     if (from !== -1 && to !== -1) {
-      const temp = this.records[from];
-      this.records[from] = this.records[to];
-      this.records[to] = temp;
+      const [temp] = this.records.splice(from, 1);
+      this.records.splice(to, 0, temp);
       return true;
     }
     return false;
