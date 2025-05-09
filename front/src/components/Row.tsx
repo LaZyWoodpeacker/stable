@@ -43,11 +43,6 @@ export const Row: React.FC<IProps> = ({
     event.dataTransfer.dropEffect = "move";
   };
 
-  const onDragEnter = (event: React.DragEvent<HTMLTableRowElement>) => {
-    event.preventDefault();
-    event.currentTarget.style = "background-color: white";
-  };
-
   const checkHandler = () => {
     onCheck(id).then((result) => {
       if (result) setSelected((state) => !state);
