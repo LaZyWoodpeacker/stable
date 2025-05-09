@@ -87,9 +87,8 @@ function App() {
       replaceItem(records[from][0], records[to][0]).then((ok) => {
         if (ok) {
           const arrCopy = [...records];
-          const temp = arrCopy[from];
-          arrCopy[from] = arrCopy[to];
-          arrCopy[to] = temp;
+          const [temp] = arrCopy.splice(from, 1);
+          arrCopy.splice(to, 0, temp);
           return setRecords(arrCopy);
         }
       });
